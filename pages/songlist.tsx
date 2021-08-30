@@ -87,12 +87,12 @@ const SongList: NextPage = (): JSX.Element => {
       <Head>
         <title>Sniffsbot Songfeed</title>
       </Head>
-      <div className="songfeed is-flex is-flex-direction-column">
+      <div className="is-flex is-flex-direction-column">
         <div ref={songListRef} className="is-flex is-flex-direction-column">
           <p className="has-text-centered is-underlined is-size-3 text-bolder mb-4">
             Song List
           </p>
-          {songList &&
+          {songList?.length ? (
             songList.map((song: Song, index: number) => {
               return (
                 <div key={`container_${index}`} className={containerClass}>
@@ -129,13 +129,20 @@ const SongList: NextPage = (): JSX.Element => {
                   </div>
                 </div>
               )
-            })}
+            })
+          ) : (
+            <div className={containerClass}>
+              <div className="column has-text-centered p-0">
+                <span>ยังไม่มีรายชื่อเพลงที่ขอเข้ามา</span>
+              </div>
+            </div>
+          )}
         </div>
         <div ref={nowplayingRef} className="is-flex is-flex-direction-column">
           <p className="has-text-centered is-underlined is-size-3 text-bolder mb-4">
             Now Playing
           </p>
-          {nowPlaying && (
+          {nowPlaying ? (
             <div className={containerClass}>
               <div className={listClass}>
                 <span className="icon">
@@ -156,6 +163,12 @@ const SongList: NextPage = (): JSX.Element => {
                 >
                   Delete
                 </button>
+              </div>
+            </div>
+          ) : (
+            <div className={containerClass}>
+              <div className="column has-text-centered p-0">
+                <span>ยังไม่มีเพลงที่กำลังเล่น</span>
               </div>
             </div>
           )}

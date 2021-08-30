@@ -63,7 +63,7 @@ const SongFeed: NextPage = (): JSX.Element => {
           <p className="has-text-centered is-underlined is-size-3 text-bolder mb-4">
             List เพลงจากต้าวๆ
           </p>
-          {songList &&
+          {songList ? (
             songList.map((song: Song, index: number) => {
               if (index < 5) {
                 return (
@@ -84,13 +84,20 @@ const SongFeed: NextPage = (): JSX.Element => {
                   </div>
                 )
               }
-            })}
+            })
+          ) : (
+            <div className={containerClass}>
+              <div className="column has-text-centered p-0">
+                <span>ขอเพลง !sr กันเข้ามา</span>
+              </div>
+            </div>
+          )}
         </div>
         <div ref={nowplayingRef} className="is-flex is-flex-direction-column">
           <p className="has-text-centered is-underlined is-size-3 text-bolder mb-4">
             Now Playing
           </p>
-          {nowPlaying && (
+          {nowPlaying ? (
             <div className={containerClass}>
               <div className={listClass}>
                 <span className="icon">
@@ -104,6 +111,12 @@ const SongFeed: NextPage = (): JSX.Element => {
                 {nowPlaying.songName}
               </div>
               <div className={scoreClass}>{nowPlaying.vote} pts</div>
+            </div>
+          ) : (
+            <div className={containerClass}>
+              <div className="column has-text-centered p-0">
+                <span>ยังไม่มีเพลงที่เล่นน้า</span>
+              </div>
             </div>
           )}
         </div>
