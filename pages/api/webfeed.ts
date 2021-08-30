@@ -13,7 +13,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       channel.publish({ name: 'feedmessage', data: JSON.stringify(req.body) })
       res
         .status(200)
-        .json({ success: true, msg: req.body.message, to: req.body.to })
+        .json({ success: true, msg: req.body.message, to: req.body.timeout })
     } else {
       res.status(403).json({ success: false, msg: 'unauthorized' })
     }

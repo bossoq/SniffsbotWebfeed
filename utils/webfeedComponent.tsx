@@ -5,7 +5,7 @@ import type { Types } from 'ably'
 
 type FeedMessage = {
   message: string
-  to: number
+  timeout: number
 }
 
 const WebfeedComponent: NextPage = (): JSX.Element => {
@@ -42,7 +42,7 @@ const WebfeedComponent: NextPage = (): JSX.Element => {
         setTimeout(() => {
           baseRef.current?.removeChild(containerElement)
         }, 200)
-      }, lastMessage.to | defaultMessageTimeout)
+      }, lastMessage.timeout | defaultMessageTimeout)
     }
   }, [lastMessage])
 
