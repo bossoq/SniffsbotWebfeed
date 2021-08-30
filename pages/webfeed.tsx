@@ -3,7 +3,11 @@ import { useChannel } from '../utils/AblyReactEffect'
 import Head from 'next/head'
 import type { NextPage } from 'next'
 import type { Types } from 'ably'
-import type { FeedMessage } from '../utils/sendWebfeed'
+
+type FeedMessage = {
+  message: string
+  timeout: number
+}
 
 const Webfeed: NextPage = (): JSX.Element => {
   const [lastMessage, setLastMessage] = useState<FeedMessage>()

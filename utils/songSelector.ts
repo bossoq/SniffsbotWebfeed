@@ -1,10 +1,8 @@
-import Ably from 'ably/promises'
 import { supabase } from './supabase'
 import type {
   PostgrestResponse,
   PostgrestSingleResponse,
 } from '@supabase/postgrest-js'
-import { Types } from 'ably'
 
 export type Song = {
   id?: number
@@ -47,8 +45,21 @@ let nowPlayingDef: Song = {
 }
 
 const ABLY_KEY: string = process.env.ABLY_KEY || ''
-const ably: Ably.Realtime = new Ably.Realtime(ABLY_KEY)
-const channel: Types.RealtimeChannelPromise = ably.channels.get('songfeed')
+const ABLY_REST_API: string = 'https://rest.ably.io/channels/songfeed/messages'
+
+const sendSongFeed = async (payload: SongResponse) => {
+  await fetch(ABLY_REST_API, {
+    method: 'POST',
+    headers: new Headers({
+      Authorization: 'Basic ' + new Buffer(ABLY_KEY).toString('base64'),
+      'Content-Type': 'application/json',
+    }),
+    body: JSON.stringify({
+      name: 'feedmessage',
+      data: JSON.stringify(payload),
+    }),
+  })
+}
 
 const sortSongList = (songList: Song[]): Song[] => {
   return songList.sort((prevSong: Song, nextSong: Song): number => {
@@ -83,7 +94,7 @@ export const preparedResponse = async (): Promise<SongResponse> => {
   if (nowPlaying.songName !== '') {
     response = { ...response, nowPlaying }
   }
-  channel.publish({ name: 'feedmessage', data: JSON.stringify(response) })
+  await sendSongFeed(response)
   return response
 }
 
