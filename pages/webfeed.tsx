@@ -1,10 +1,13 @@
-import React, { useEffect, useState, useRef } from 'react'
+import { useEffect, useState, useRef } from 'react'
+import ReactDOM from 'react-dom'
+import WebFeedComponent from './components/WebFeed'
 import { useChannel } from '../utils/AblyReactEffect'
 import Head from 'next/head'
 import type { NextPage } from 'next'
 import type { Types } from 'ably'
 
 type FeedMessage = {
+  type: string
   message: string
   timeout: number
 }
@@ -30,11 +33,13 @@ const Webfeed: NextPage = (): JSX.Element => {
       const containerElement = document.createElement('div')
       containerElement.className = 'pt-2 fadein'
 
-      const baseSpanElement = document.createElement('span')
-      baseSpanElement.className = 'icon-text is-align-items-center'
-      baseSpanElement.innerHTML = lastMessage.message
-
-      containerElement.appendChild(baseSpanElement)
+      ReactDOM.render(
+        <WebFeedComponent
+          type={lastMessage.type}
+          message={lastMessage.message}
+        />,
+        containerElement
+      )
       baseRef.current?.appendChild(containerElement)
 
       setTimeout(() => {
