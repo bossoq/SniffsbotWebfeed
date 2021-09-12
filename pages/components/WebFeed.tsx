@@ -286,18 +286,23 @@ const WebFeedComponent = (props: any): JSX.Element => {
       )
     case 'shooterSuccessFeed':
       return (
-        <span className={defaultSpan}>
-          <span className={defaultTagName}>{props.message.username}</span>
-          <span className={text}>จ้างมือปืนสนิฟ</span>
-          <span className="icon">
-            <FontAwesomeIcon icon={faCrosshairs} />
+        <>
+          <span className={defaultSpan}>
+            <span className={defaultTagName}>{props.message.username}</span>
+            <span className={text}>จ้างมือปืนสนิฟ</span>
+            <span className="icon">
+              <FontAwesomeIcon icon={faCrosshairs} />
+            </span>
+            <span className={text}>ยิง</span>
+            <span className={defaultSnapName}>{props.message.target}</span>
+            <span className={text}>
+              {props.message.timeout}s ({props.message.coinleft})
+            </span>
           </span>
-          <span className={text}>ยิง</span>
-          <span className={defaultSnapName}>{props.message.target}</span>
-          <span className={text}>
-            {props.message.timeout}s ({props.message.coinleft})
-          </span>
-        </span>
+          <audio autoPlay>
+            <source src="/reload.mp3" type="audio/mpeg" />
+          </audio>
+        </>
       )
     case 'shooterDodgeFeed':
       return (
