@@ -55,9 +55,11 @@ const WebFeedComponent = (props: any): JSX.Element => {
           <p>
             <span className={defaultSpan}>
               <span className={defaultTagName}>{props.message.username}</span>
-              <span className={text}>ได้รับ </span>
-              <span className="icon">
-                <FontAwesomeIcon icon={faCoins} />
+              <span className={text}>
+                ได้รับ
+                <span className="icon">
+                  <FontAwesomeIcon icon={faCoins} />
+                </span>
               </span>
               <span className={text}>
                 {props.message.coin} Sniffscoin จากการ Subscribe
@@ -69,9 +71,11 @@ const WebFeedComponent = (props: any): JSX.Element => {
             <span className={defaultSpan}>
               <span className={text}>สมาชิก</span>
               <span className={defaultTagViewer}>{props.message.viewer}</span>
-              <span className={text}>คน ได้รับ 1 Sniffscoin</span>
-              <span className="icon">
-                <FontAwesomeIcon icon={faCoins} />
+              <span className={text}>
+                คน ได้รับ 1 Sniffscoin
+                <span className="icon">
+                  <FontAwesomeIcon icon={faCoins} />
+                </span>
               </span>
               <span className={text}>จากการ Subscribe ของ</span>
               <span className={defaultTagName}>{props.message.username}</span>
@@ -85,17 +89,17 @@ const WebFeedComponent = (props: any): JSX.Element => {
           <p>
             <span className={defaultSpan}>
               <span className={defaultTagName}>{props.message.username}</span>
-              <span className={text}>ได้รับ</span>
-              <span className="icon">
-                <FontAwesomeIcon icon={faCoins} />
-              </span>
               <span className={text}>
+                ได้รับ
+                <span className="icon">
+                  <FontAwesomeIcon icon={faCoins} />
+                </span>
                 {props.message.coin} Sniffscoin จากการ
+                <span className="icon">
+                  <FontAwesomeIcon icon={faGift} />
+                </span>
+                Gift ให้
               </span>
-              <span className="icon">
-                <FontAwesomeIcon icon={faGift} />
-              </span>
-              <span className={text}>Gift ให้</span>
               <span className={defaultTagName}>{props.message.recipent}</span>
               <span className={defaultTagViewer}>T{props.message.plan}</span>
             </span>
@@ -103,20 +107,24 @@ const WebFeedComponent = (props: any): JSX.Element => {
           <p>
             <span className={defaultSpan}>
               <span className={defaultTagName}>{props.message.recipent}</span>
-              <span className={text}>ได้รับ</span>
-              <span className="icon">
-                <FontAwesomeIcon icon={faCoins} />
+              <span className={text}>
+                ได้รับ
+                <span className="icon">
+                  <FontAwesomeIcon icon={faCoins} />
+                </span>
+                {props.message.coin} Sniffscoin
               </span>
-              <span className={text}>{props.message.coin} Sniffscoin</span>
             </span>
           </p>
           <p>
             <span className={defaultSpan}>
               <span className={text}>สมาชิก</span>
               <span className={defaultTagViewer}>{props.message.viewer}</span>
-              <span className={text}>คน ได้รับ 1 Sniffscoin</span>
-              <span className="icon">
-                <FontAwesomeIcon icon={faCoins} />
+              <span className={text}>
+                คน ได้รับ 1 Sniffscoin
+                <span className="icon">
+                  <FontAwesomeIcon icon={faCoins} />
+                </span>
               </span>
             </span>
           </p>
@@ -126,15 +134,17 @@ const WebFeedComponent = (props: any): JSX.Element => {
       return (
         <span className={defaultSpan}>
           <span className={defaultTagName}>{props.message.username}</span>
-          <span className={text}>ได้รับ</span>
-          <span className="icon">
-            <FontAwesomeIcon icon={faCoins} />
+          <span className={text}>
+            ได้รับ
+            <span className="icon">
+              <FontAwesomeIcon icon={faCoins} />
+            </span>
+            {props.message.coin} Sniffscoin จากการ
+            <span className="icon">
+              <FontAwesomeIcon icon={faGift} />
+            </span>
+            Gift Sub x {props.message.giftCount}
           </span>
-          <span className={text}>{props.message.coin} Sniffscoin จากการ</span>
-          <span className="icon">
-            <FontAwesomeIcon icon={faGift} />
-          </span>
-          <span className={text}>Gift Sub x {props.message.giftCount}</span>
           <span className={defaultTagViewer}>T{props.message.plan}</span>
         </span>
       )
@@ -144,11 +154,13 @@ const WebFeedComponent = (props: any): JSX.Element => {
           <p>
             <span className={defaultSpan}>
               <span className={defaultTagName}>{props.message.recipent}</span>
-              <span className={text}>ได้รับ</span>
-              <span className="icon">
-                <FontAwesomeIcon icon={faCoins} />
+              <span className={text}>
+                ได้รับ
+                <span className="icon">
+                  <FontAwesomeIcon icon={faCoins} />
+                </span>
+                {props.message.coin} Sniffscoin
               </span>
-              <span className={text}>{props.message.coin} Sniffscoin</span>
               <span className={defaultTagViewer}>T{props.message.plan}</span>
             </span>
           </p>
@@ -156,9 +168,11 @@ const WebFeedComponent = (props: any): JSX.Element => {
             <span className={defaultSpan}>
               <span className={text}>สมาชิก</span>
               <span className={defaultTagViewer}>{props.message.viewer}</span>
-              <span className={text}>คน ได้รับ 1 Sniffscoin</span>
-              <span className="icon">
-                <FontAwesomeIcon icon={faCoins} />
+              <span className={text}>
+                คน ได้รับ 1 Sniffscoin
+                <span className="icon">
+                  <FontAwesomeIcon icon={faCoins} />
+                </span>
               </span>
             </span>
           </p>
@@ -178,11 +192,11 @@ const WebFeedComponent = (props: any): JSX.Element => {
       return (
         <span className={defaultSpan}>
           <span className={defaultTagName}>{props.message.username}</span>
-          <span className={text}>ได้รับ</span>
-          <span className="icon">
-            <FontAwesomeIcon icon={faCoins} />
-          </span>
           <span className={text}>
+            ได้รับ
+            <span className="icon">
+              <FontAwesomeIcon icon={faCoins} />
+            </span>
             {props.message.coin} Sniffscoin จากการให้ {props.message.bits} bit
           </span>
         </span>
@@ -194,9 +208,9 @@ const WebFeedComponent = (props: any): JSX.Element => {
           <span className={defaultTagViewer}>{props.message.viewer}</span>
           <span className={text}>
             คน ได้รับ {props.message.coin} Sniffscoin
-          </span>
-          <span className="icon">
-            <FontAwesomeIcon icon={faCoins} />
+            <span className="icon">
+              <FontAwesomeIcon icon={faCoins} />
+            </span>
           </span>
         </span>
       )
@@ -204,37 +218,43 @@ const WebFeedComponent = (props: any): JSX.Element => {
       return (
         <span className={defaultSpan}>
           <span className={defaultTagName}>{props.message.username}</span>
-          <span className={text}>ได้รับ</span>
-          <span className="icon">
-            <FontAwesomeIcon icon={faCoins} />
+          <span className={text}>
+            ได้รับ
+            <span className="icon">
+              <FontAwesomeIcon icon={faCoins} />
+            </span>
+            {props.message.coin} Sniffscoin
           </span>
-          <span className={text}>{props.message.coin} Sniffscoin</span>
         </span>
       )
     case 'deductcoinfeed':
       return (
         <span className={defaultSpan}>
           <span className={defaultTagName}>{props.message.username}</span>
-          <span className={text}>ถูกหัก</span>
-          <span className="icon">
-            <FontAwesomeIcon icon={faCoins} />
+          <span className={text}>
+            ถูกหัก
+            <span className="icon">
+              <FontAwesomeIcon icon={faCoins} />
+            </span>
+            {props.message.coin} Sniffscoin
           </span>
-          <span className={text}>{props.message.coin} Sniffscoin</span>
         </span>
       )
     case 'sniffsnos':
       return (
         <span className={defaultSpan}>
           <span className={defaultTagName}>SNIFFSNOS</span>
-          <span className="icon">
-            <FontAwesomeIcon icon={faHandPointUp} />
+          <span className={text}>
+            <span className="icon">
+              <FontAwesomeIcon icon={faHandPointUp} />
+            </span>
           </span>
           <span className={defaultSnapName}>{props.message.username}</span>
-          <span className={text}>(</span>
-          <span className="icon">
-            <FontAwesomeIcon icon={faUserAltSlash} />
-          </span>
           <span className={text}>
+            (
+            <span className="icon">
+              <FontAwesomeIcon icon={faUserAltSlash} />
+            </span>
             {props.message.idx}/{props.message.total})
           </span>
         </span>
@@ -267,21 +287,25 @@ const WebFeedComponent = (props: any): JSX.Element => {
       return (
         <span className={defaultSpan}>
           <span className={defaultTagName}>{props.message.username}</span>
-          <span className={text}>โหวตเพลง {props.message.songName}</span>
-          <span className="icon">
-            <FontAwesomeIcon icon={faMusic} />
+          <span className={text}>
+            โหวตเพลง {props.message.songName}
+            <span className="icon">
+              <FontAwesomeIcon icon={faMusic} />
+            </span>
+            ({props.message.coinleft})
           </span>
-          <span className={text}>({props.message.coinleft})</span>
         </span>
       )
     case 'shooterSuicideFeed':
       return (
         <span className={defaultSpan}>
           <span className={defaultSnapName}>{props.message.username}</span>
-          <span className="icon">
-            <FontAwesomeIcon icon={faHandPointLeft} />
+          <span className={text}>
+            <span className="icon">
+              <FontAwesomeIcon icon={faHandPointLeft} />
+            </span>
+            แวะไปเยือนยมโลก {props.message.timeout}s
           </span>
-          <span className={text}>แวะไปเยือนยมโลก {props.message.timeout}s</span>
         </span>
       )
     case 'shooterSuccessFeed':
@@ -289,11 +313,13 @@ const WebFeedComponent = (props: any): JSX.Element => {
         <>
           <span className={defaultSpan}>
             <span className={defaultTagName}>{props.message.username}</span>
-            <span className={text}>จ้างมือปืนสนิฟ</span>
-            <span className="icon">
-              <FontAwesomeIcon icon={faCrosshairs} />
+            <span className={text}>
+              จ้างมือปืนสนิฟ
+              <span className="icon">
+                <FontAwesomeIcon icon={faCrosshairs} />
+              </span>
+              ยิง
             </span>
-            <span className={text}>ยิง</span>
             <span className={defaultSnapName}>{props.message.target}</span>
             <span className={text}>
               {props.message.timeout}s ({props.message.coinleft})
@@ -308,37 +334,43 @@ const WebFeedComponent = (props: any): JSX.Element => {
       return (
         <span className={defaultSpan}>
           <span className={defaultSnapName}>{props.message.target}</span>
-          <span className={text}>หลบมือปืนสนิฟได้</span>
-          <span className="icon">
-            <FontAwesomeIcon icon={faRunning} />
+          <span className={text}>
+            หลบมือปืนสนิฟได้
+            <span className="icon">
+              <FontAwesomeIcon icon={faRunning} />
+            </span>
+            ({props.message.dodgeRate.toFixed()}%)
           </span>
-          <span className={text}>({props.message.dodgeRate.toFixed()}%)</span>
         </span>
       )
     case 'shooterUnsuccessFeed':
       return (
         <span className={defaultSpan}>
           <span className={defaultSnapName}>{props.message.username}</span>
-          <span className={text}>ไม่มีเงินจ้างมือปืน ถูกยิงเอง</span>
-          <span className="icon">
-            <FontAwesomeIcon icon={faCrosshairs} />
+          <span className={text}>
+            ไม่มีเงินจ้างมือปืน ถูกยิงเอง
+            <span className="icon">
+              <FontAwesomeIcon icon={faCrosshairs} />
+            </span>
+            {props.message.timeout}s
           </span>
-          <span className={text}>{props.message.timeout}s</span>
         </span>
       )
     case 'shooterVIPFeed':
       return (
         <span className={defaultSpan}>
           <span className={defaultSnapName}>{props.message.username}</span>
-          <span className={text}>บังอาจยิง</span>
-          <span className="icon">
-            <FontAwesomeIcon icon={faUserSecret} />
+          <span className={text}>
+            บังอาจยิง
+            <span className="icon">
+              <FontAwesomeIcon icon={faUserSecret} />
+            </span>
+            VIP โดนยิงเอง
+            <span className="icon">
+              <FontAwesomeIcon icon={faCrosshairs} />
+            </span>
+            {props.message.timeout}s
           </span>
-          <span className={text}>VIP โดนยิงเอง</span>
-          <span className="icon">
-            <FontAwesomeIcon icon={faCrosshairs} />
-          </span>
-          <span className={text}>{props.message.timeout}s</span>
         </span>
       )
     case 'lottoStat':
@@ -369,11 +401,11 @@ const WebFeedComponent = (props: any): JSX.Element => {
       return (
         <span className={defaultSpan}>
           <span className={defaultTagName}>{props.message.username}</span>
-          <span className={text}>ซื้อ</span>
-          <span className="icon">
-            <FontAwesomeIcon icon={faCartPlus} />
-          </span>
           <span className={text}>
+            ซื้อ
+            <span className="icon">
+              <FontAwesomeIcon icon={faCartPlus} />
+            </span>
             SniffsLotto หมายเลข {props.message.lotto} สำเร็จ (
             {props.message.coinleft})
           </span>
@@ -389,11 +421,13 @@ const WebFeedComponent = (props: any): JSX.Element => {
               <span className={defaultTagViewer}>
                 {props.message.winNumber}
               </span>
-              <span className={text}>เงินรางวัลรวม</span>
-              <span className="icon">
-                <FontAwesomeIcon icon={faCoins} />
+              <span className={text}>
+                เงินรางวัลรวม
+                <span className="icon">
+                  <FontAwesomeIcon icon={faCoins} />
+                </span>
+                {props.message.payout} Sniffscoin
               </span>
-              <span className={text}>{props.message.payout} Sniffscoin</span>
             </span>
           </p>
           {Object.entries(props.message.usernames).map(([username, prize]) => {
@@ -401,11 +435,13 @@ const WebFeedComponent = (props: any): JSX.Element => {
               <p>
                 <span className={defaultSpan}>
                   <span className={defaultTagName}>{username}</span>
-                  <span className={text}>ได้รับ</span>
-                  <span className="icon">
-                    <FontAwesomeIcon icon={faCoins} />
+                  <span className={text}>
+                    ได้รับ
+                    <span className="icon">
+                      <FontAwesomeIcon icon={faCoins} />
+                    </span>
+                    {prize} Sniffscoin
                   </span>
-                  <span className={text}>{prize} Sniffscoin</span>
                 </span>
               </p>
             )
@@ -440,20 +476,24 @@ const WebFeedComponent = (props: any): JSX.Element => {
       return (
         <span className={defaultSpan}>
           <span className={defaultTagName}>{props.message.username}</span>
-          <span className={text}>ซื้อตั๋วชิงโชค</span>
-          <span className="icon">
-            <FontAwesomeIcon icon={faTicketAlt} />
+          <span className={text}>
+            ซื้อตั๋วชิงโชค
+            <span className="icon">
+              <FontAwesomeIcon icon={faTicketAlt} />
+            </span>
+            {props.message.count} ใบ
           </span>
-          <span className={text}>{props.message.count} ใบ</span>
         </span>
       )
     case 'drawRaffleFeed':
       return (
         <span className={defaultSpan}>
           <span className={defaultTagName}>{props.message.username}</span>
-          <span className={text}>ได้รับรางวัล</span>
-          <span className="icon">
-            <FontAwesomeIcon icon={faTicketAlt} />
+          <span className={text}>
+            ได้รับรางวัล
+            <span className="icon">
+              <FontAwesomeIcon icon={faTicketAlt} />
+            </span>
           </span>
         </span>
       )
@@ -464,11 +504,9 @@ const WebFeedComponent = (props: any): JSX.Element => {
             <span className={defaultTagName}>{props.message.username}</span>
             <span className={text}>
               ได้รับ {props.message.prize} Sniffscoin
-            </span>
-            <span className="icon">
-              <FontAwesomeIcon icon={faHandHoldingUsd} />
-            </span>
-            <span className={text}>
+              <span className="icon">
+                <FontAwesomeIcon icon={faHandHoldingUsd} />
+              </span>
               Coinflip ออก{props.message.winside} ({props.message.coinleft})
             </span>
           </span>
