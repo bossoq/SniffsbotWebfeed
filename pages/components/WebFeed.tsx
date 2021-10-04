@@ -332,16 +332,21 @@ const WebFeedComponent = (props: any): JSX.Element => {
       )
     case 'shooterDodgeFeed':
       return (
-        <span className={defaultSpan}>
-          <span className={defaultSnapName}>{props.message.target}</span>
-          <span className={text}>
-            หลบมือปืนสนิฟได้
-            <span className="icon">
-              <FontAwesomeIcon icon={faRunning} />
+        <>
+          <span className={defaultSpan}>
+            <span className={defaultSnapName}>{props.message.target}</span>
+            <span className={text}>
+              หลบมือปืนสนิฟได้
+              <span className="icon">
+                <FontAwesomeIcon icon={faRunning} />
+              </span>
+              ({props.message.dodgeRate.toFixed()}%)
             </span>
-            ({props.message.dodgeRate.toFixed()}%)
           </span>
-        </span>
+          <audio autoPlay>
+            <source src="/dodge.mp3" type="audio/mpeg" />
+          </audio>
+        </>
       )
     case 'shooterUnsuccessFeed':
       return (
