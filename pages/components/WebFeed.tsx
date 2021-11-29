@@ -411,8 +411,8 @@ const WebFeedComponent = (props: any): JSX.Element => {
             <span className="icon">
               <FontAwesomeIcon icon={faCartPlus} />
             </span>
-            SniffsLotto หมายเลข {props.message.lotto} สำเร็จ (
-            {props.message.coinleft})
+            SniffsLotto หมายเลข {props.message.lotto} จำนวน{' '}
+            {props.message.count} ใบ สำเร็จ ({props.message.coinleft})
           </span>
         </span>
       )
