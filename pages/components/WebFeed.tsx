@@ -62,7 +62,7 @@ const WebFeedComponent = (props: any): JSX.Element => {
                 </span>
               </span>
               <span className={text}>
-                {props.message.coin} Sniffscoin จากการ Subscribe
+                {props.message.coin} COIN จากการ Subscribe
               </span>
               <span className={defaultTagViewer}>T{props.message.plan}</span>
             </span>
@@ -72,7 +72,7 @@ const WebFeedComponent = (props: any): JSX.Element => {
               <span className={text}>สมาชิก</span>
               <span className={defaultTagViewer}>{props.message.viewer}</span>
               <span className={text}>
-                คน ได้รับ 1 Sniffscoin
+                คน ได้รับ 1 COIN
                 <span className="icon">
                   <FontAwesomeIcon icon={faCoins} />
                 </span>
@@ -94,7 +94,7 @@ const WebFeedComponent = (props: any): JSX.Element => {
                 <span className="icon">
                   <FontAwesomeIcon icon={faCoins} />
                 </span>
-                {props.message.coin} Sniffscoin จากการ
+                {props.message.coin} COIN จากการ
                 <span className="icon">
                   <FontAwesomeIcon icon={faGift} />
                 </span>
@@ -112,7 +112,7 @@ const WebFeedComponent = (props: any): JSX.Element => {
                 <span className="icon">
                   <FontAwesomeIcon icon={faCoins} />
                 </span>
-                {props.message.coin} Sniffscoin
+                {props.message.coin} COIN
               </span>
             </span>
           </p>
@@ -121,7 +121,7 @@ const WebFeedComponent = (props: any): JSX.Element => {
               <span className={text}>สมาชิก</span>
               <span className={defaultTagViewer}>{props.message.viewer}</span>
               <span className={text}>
-                คน ได้รับ 1 Sniffscoin
+                คน ได้รับ 1 COIN
                 <span className="icon">
                   <FontAwesomeIcon icon={faCoins} />
                 </span>
@@ -139,7 +139,7 @@ const WebFeedComponent = (props: any): JSX.Element => {
             <span className="icon">
               <FontAwesomeIcon icon={faCoins} />
             </span>
-            {props.message.coin} Sniffscoin จากการ
+            {props.message.coin} COIN จากการ
             <span className="icon">
               <FontAwesomeIcon icon={faGift} />
             </span>
@@ -159,7 +159,7 @@ const WebFeedComponent = (props: any): JSX.Element => {
                 <span className="icon">
                   <FontAwesomeIcon icon={faCoins} />
                 </span>
-                {props.message.coin} Sniffscoin
+                {props.message.coin} COIN
               </span>
               <span className={defaultTagViewer}>T{props.message.plan}</span>
             </span>
@@ -169,7 +169,7 @@ const WebFeedComponent = (props: any): JSX.Element => {
               <span className={text}>สมาชิก</span>
               <span className={defaultTagViewer}>{props.message.viewer}</span>
               <span className={text}>
-                คน ได้รับ 1 Sniffscoin
+                คน ได้รับ 1 COIN
                 <span className="icon">
                   <FontAwesomeIcon icon={faCoins} />
                 </span>
@@ -197,7 +197,7 @@ const WebFeedComponent = (props: any): JSX.Element => {
             <span className="icon">
               <FontAwesomeIcon icon={faCoins} />
             </span>
-            {props.message.coin} Sniffscoin จากการให้ {props.message.bits} bit
+            {props.message.coin} COIN จากการให้ {props.message.bits} bit
           </span>
         </span>
       )
@@ -207,7 +207,7 @@ const WebFeedComponent = (props: any): JSX.Element => {
           <span className={text}>สมาชิก</span>
           <span className={defaultTagViewer}>{props.message.viewer}</span>
           <span className={text}>
-            คน ได้รับ {props.message.coin} Sniffscoin
+            คน ได้รับ {props.message.coin} COIN
             <span className="icon">
               <FontAwesomeIcon icon={faCoins} />
             </span>
@@ -223,7 +223,7 @@ const WebFeedComponent = (props: any): JSX.Element => {
             <span className="icon">
               <FontAwesomeIcon icon={faCoins} />
             </span>
-            {props.message.coin} Sniffscoin
+            {props.message.coin} COIN
           </span>
         </span>
       )
@@ -236,7 +236,7 @@ const WebFeedComponent = (props: any): JSX.Element => {
             <span className="icon">
               <FontAwesomeIcon icon={faCoins} />
             </span>
-            {props.message.coin} Sniffscoin
+            {props.message.coin} COIN
           </span>
         </span>
       )
@@ -431,7 +431,7 @@ const WebFeedComponent = (props: any): JSX.Element => {
                 <span className="icon">
                   <FontAwesomeIcon icon={faCoins} />
                 </span>
-                {props.message.payout} Sniffscoin
+                {props.message.payout} COIN
               </span>
             </span>
           </p>
@@ -445,7 +445,7 @@ const WebFeedComponent = (props: any): JSX.Element => {
                     <span className="icon">
                       <FontAwesomeIcon icon={faCoins} />
                     </span>
-                    {prize} Sniffscoin
+                    {prize} COIN
                   </span>
                 </span>
               </p>
@@ -508,7 +508,7 @@ const WebFeedComponent = (props: any): JSX.Element => {
           <span className={defaultSpan}>
             <span className={defaultTagName}>{props.message.username}</span>
             <span className={text}>
-              ได้รับ {props.message.prize} Sniffscoin
+              ได้รับ {props.message.prize} COIN
               <span className="icon">
                 <FontAwesomeIcon icon={faHandHoldingUsd} />
               </span>
