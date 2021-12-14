@@ -326,7 +326,7 @@ const WebFeedComponent = (props: any): JSX.Element => {
             </span>
           </span>
           <audio autoPlay>
-            <source src="/reload.mp3" type="audio/mpeg" />
+            <source src="/headshot.mp3" type="audio/mpeg" />
           </audio>
         </>
       )
@@ -344,7 +344,7 @@ const WebFeedComponent = (props: any): JSX.Element => {
             </span>
           </span>
           <audio autoPlay>
-            <source src="/dodge.mp3" type="audio/mpeg" />
+            <source src="/dodgesniffs.mp3" type="audio/mpeg" />
           </audio>
         </>
       )
